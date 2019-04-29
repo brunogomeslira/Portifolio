@@ -1,10 +1,10 @@
 window.comments = new controlComments();
 
 window.comments._databaseGet.on("value", function (snapshot) {
-    var cardsDisplay = '';
+    let cardsDisplay = '';
     snapshot.forEach(function (childSnapshot) {
-        var key = childSnapshot.key;
-        var childData = childSnapshot.val();
+        let key = childSnapshot.key;
+        let childData = childSnapshot.val();
 
         childData['key'] = key;
 
