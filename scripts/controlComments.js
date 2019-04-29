@@ -42,8 +42,8 @@ class controlComments {
   addComents() {
     event.preventDefault();
 
-    var _this = this;
-    var check = true;
+    let _this = this;
+    let check = true;
 
     let fields = document.querySelectorAll("#form-user-create [name]");
     let user = {};
@@ -59,13 +59,13 @@ class controlComments {
 
     if (check) {
 
-      var file = this._file;
+      let file = this._file;
 
-      var metadata = {
+      let metadata = {
         contentType: 'image/jpeg'
       };
 
-      var uploadTask = this._storageRef.child('images/' + file.name).put(file, metadata);
+      let uploadTask = this._storageRef.child('images/' + file.name).put(file, metadata);
 
       uploadTask.on(firebase.storage.TaskEvent.STATE_CHANGED,
         function (snapshot) {
