@@ -70,7 +70,7 @@ class controlComments {
       uploadTask.on(firebase.storage.TaskEvent.STATE_CHANGED,
         function (snapshot) {
 
-          var progress = (snapshot.bytesTransferred / snapshot.totalBytes) * 100;
+          let progress = (snapshot.bytesTransferred / snapshot.totalBytes) * 100;
           document.getElementById('progress').style.width = progress + '%';
 
           document.getElementById('progress').innerHTML = progress + '%';
